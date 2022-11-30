@@ -1,5 +1,5 @@
 import express from 'express';
-import addToWLValidation from '../middleware/addtoWLvalidation.js';
+import addToWLValidation from '../middleware/addToWLValidation.js'
 import emailValidation from '../middleware/emailValidation.js';
 import movieValidation from '../middleware/movieValidation.js';
 import userFieldValidation from '../middleware/userFieldValidation.js';
