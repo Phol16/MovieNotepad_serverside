@@ -12,9 +12,9 @@ import watchlist from '../models/watchlist.js';
 const router = express.Router();
 
 router.route('/').post(userFieldValidation, emailValidation, async (request, resposne) => {
-  const { firstName, lastName, email, password } = request.body;
+  const {  email, password } = request.body;
 
-  const theUser = { firstName, lastName, email, password, role: 'User' };
+  const theUser = {  email, password, role: 'User' };
 
   await user.create(theUser);
   return resposne.status(201).json(theUser);
