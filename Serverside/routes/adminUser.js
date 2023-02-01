@@ -10,9 +10,9 @@ import emailFieldValidation from '../middleware/emailFieldValidation.js';
 const router = express.Router();
 
 router.route('/').post(userFieldValidation, emailValidation, async (request, resposne) => {
-  const { firstName, lastName, email, password } = request.body;
+  const { email, password } = request.body;
 
-  const theAdminUser = { firstName, lastName, email, password, role: 'admin_User' };
+  const theAdminUser = { email, password, role: 'admin_User' };
 
   await adminUser.create(theAdminUser);
   return resposne.status(201).json(theAdminUser);
